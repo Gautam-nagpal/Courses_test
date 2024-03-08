@@ -2,7 +2,7 @@ import React from "react";
 import { CustInstorCard } from "../CustomInstCard";
 import { CustCardWrapperStyled } from "./styled";
 import RadioBtn from "../RadioBtn";
-import { getDaysDate } from "../../../utils";
+import { convertToFormattedDate, getDaysDate } from "../../../utils";
 import { useMemo } from "react";
 
 
@@ -15,7 +15,7 @@ export const CustomCard = (props) => {
     const isSelected = (id === selectedCourse?.id) ? true : false;
 
 
-    const DatesValues = useMemo(() => { 
+    const DatesValues = useMemo(() => {
         return getDaysDate(dates)
     }, [dates])
 
@@ -39,7 +39,7 @@ export const CustomCard = (props) => {
                     <CustInstorCard instructors={instructors} />
                 </div>
                 <div className="card-price-sec">
-                    <span>${pricing.amount} {pricing.currency}</span> Until {pricing.valid_until}
+                    <span>${pricing.amount} {pricing.currency}</span> Until {convertToFormattedDate(pricing.valid_until, { day: 'numeric', weekday: 'long' })}
                 </div>
             </div>
         </div>
