@@ -10,7 +10,7 @@ export const Button = (props) => {
 
     return <ButtonWrapperStyled
         className={className}
-        btnType={btnType}
+        $btntype={btnType}
         width={width}
         height={height}
     >

@@ -9,7 +9,11 @@ export default function RadioBtn(props) {
     return (
         <FormControl component="fieldset">
             <RadioGroup row aria-label="position" name="position" defaultValue="top">
-                <FormControlLabel value="end" control={<Radio color="primary" checked={checked} />} label={title} />
+                <FormControlLabel
+                    value="end"
+                    control={<Radio color="primary" checked={checked} />}
+                    label={title} className='radio-btn-label'
+                />
             </RadioGroup>
         </FormControl>
     );

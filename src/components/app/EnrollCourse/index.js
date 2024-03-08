@@ -1,6 +1,6 @@
-import { Button, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { staticData } from "../../../staticData";
 import { CustomCard } from "../../common/CustomCard";
 
@@ -11,7 +11,7 @@ export default function EnrollCourse(props) {
 
     useEffect(() => {
         //find Course and set it
-        let enrolledCoursed = staticData.find((item) => item.id == id)
+        let enrolledCoursed = staticData.find((item) => `${item.id}` === id)
         setEnrolledCourse(enrolledCoursed)
     }, [id])
 
@@ -19,7 +19,7 @@ export default function EnrollCourse(props) {
     return (
         <Grid item xs={12}>
             <Grid container className="d-flex jc-center">
-                <Grid item={12} >
+                <Grid item >
                     <Typography>You are Enrolled to this course</Typography>
                 </Grid>
 

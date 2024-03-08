@@ -11,7 +11,7 @@ export function setData(label, data) {
 
 
 export function formatDate(val, format) {
-    if (format == "MM DD") {
+    if (format === "MM DD") {
         const date = new Date(val * 1000); // Convert seconds to milliseconds
 
         // Get the month and day names

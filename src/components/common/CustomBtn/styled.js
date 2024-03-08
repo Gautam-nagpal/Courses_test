@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 
-const handleBGColor = (btnType) => {
-    switch (btnType) {
+const handleBGColor = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "white"
         default:
@@ -10,8 +10,8 @@ const handleBGColor = (btnType) => {
     }
 }
 
-const handleBGColorHover = (btnType) => {
-    switch (btnType) {
+const handleBGColorHover = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "white"
         default:
@@ -19,8 +19,8 @@ const handleBGColorHover = (btnType) => {
     }
 }
 
-const handleBGColorFocus = (btnType) => {
-    switch (btnType) {
+const handleBGColorFocus = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "white"
         default:
@@ -28,8 +28,8 @@ const handleBGColorFocus = (btnType) => {
     }
 }
 
-const handleColor = (btnType) => {
-    switch (btnType) {
+const handleColor = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "#0073DD"
         default:
@@ -37,8 +37,8 @@ const handleColor = (btnType) => {
     }
 }
 
-const handleText = (btnType) => {
-    switch (btnType) {
+const handleText = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "underline"
         default:
@@ -47,8 +47,8 @@ const handleText = (btnType) => {
 }
 
 
-const handleBorderhover = (btnType) => {
-    switch (btnType) {
+const handleBorderhover = ($btntype) => {
+    switch ($btntype) {
         case "link":
             return "1px solid #0073DD"
         default:
@@ -61,8 +61,8 @@ export const ButtonWrapperStyled = styled.div`
     justify-content: center;
 
     button{
-        color : ${({ btnType }) => handleColor(btnType)};
-        background-color : ${({ btnType }) => handleBGColor(btnType)};
+        color : ${({ $btntype }) => handleColor($btntype)};
+        background-color : ${({ $btntype }) => handleBGColor($btntype)};
         border: none;
         border-radius: 7px;
         height: 48px;
@@ -82,15 +82,15 @@ export const ButtonWrapperStyled = styled.div`
     
 
     button:hover{
-        background-color : ${({ btnType }) => handleBGColorHover(btnType)};
+        background-color : ${({ $btntype }) => handleBGColorHover($btntype)};
         cursor: pointer;
-        text-decoration: ${({ btnType }) => handleText(btnType)};
+        text-decoration: ${({ $btntype }) => handleText($btntype)};
     }
 
     button:focus{
-        background-color : ${({ btnType }) => handleBGColorFocus(btnType)};
+        background-color : ${({ $btntype }) => handleBGColorFocus($btntype)};
         cursor: pointer;
-        border: ${({ btnType }) => handleBorderhover(btnType)};
+        border: ${({ $btntype }) => handleBorderhover($btntype)};
 
         svg{
             fill: #0073DD;

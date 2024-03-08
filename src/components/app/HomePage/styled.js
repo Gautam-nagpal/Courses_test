@@ -6,4 +6,6 @@ export const CourseListContainerStyled = styled(Grid)`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 `

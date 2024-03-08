@@ -3,4 +3,4 @@ import thunk from 'redux-thunk';
 
 import rootReducer from './reducers/index';
 
-export const store = createStore(rootReducer, ['Use Redux'], applyMiddleware(thunk))
+export const store = createStore(rootReducer, { users: {} }, applyMiddleware(thunk))

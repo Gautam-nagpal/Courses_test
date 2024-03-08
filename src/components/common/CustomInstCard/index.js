@@ -4,7 +4,7 @@ import { CustInstCardWrapperStyled } from "./styled";
 
 
 export const CustInstorCard = (props) => {
-    const { className, name, src, instructors } = props;
+    const { className, instructors } = props;
     let instructorObj = instructors[0];
 
     return <CustInstCardWrapperStyled
@@ -12,12 +12,13 @@ export const CustInstorCard = (props) => {
     >
         <div>
             <img
-            className="instructor-img" 
-            src={instructorObj.portrait_image || ""}
+                className="instructor-img"
+                src={instructorObj.portrait_image || ""}
                 onError={({ currentTarget }) => {
                     currentTarget.onerror = null; // prevents looping
                     currentTarget.src = "https://i.pinimg.com/474x/80/29/53/8029531c433b7d0e2bf48ca6429ef325.jpg";
                 }}
+                alt="instructor"
             />
         </div>
         <div>

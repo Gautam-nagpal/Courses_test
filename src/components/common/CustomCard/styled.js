@@ -15,6 +15,14 @@ export const CustCardWrapperStyled = styled.div`
 
     .card-top-sec{
         display: flex;
+
+        .radio-btn-label{
+            .MuiFormControlLabel-label{
+                font-size: 16px;
+                font-weight: 600;
+                color: #4D0001;
+            }
+        }
     }
 
     .card-content{

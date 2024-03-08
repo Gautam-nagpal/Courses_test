@@ -35,11 +35,11 @@ export default function Homepage(props) {
     return (
         <Grid item xs={12}>
             <Grid container className="d-block">
-                <Grid item={12}>
+                <Grid item>
                     Courses List
                 </Grid>
 
-                <CourseListContainerStyled item={12}>
+                <CourseListContainerStyled item>
                     {
                         courseList.length ? courseList.map((item, index) => {
                             return <React.Fragment key={index}>
@@ -53,9 +53,9 @@ export default function Homepage(props) {
                             : null
                     }
                 </CourseListContainerStyled>
-                <Grid item={12}>
-                    <Button title="Enroll in Course" width="50%" onClick={handleClickEnroll} />
-                    <Button title="Save Course" width="50%" btnType="link" leftIcon={BookmarkIcon()} />
+                <Grid item>
+                    <Button title="Enroll in Course" width="33%" onClick={handleClickEnroll} />
+                    <Button title="Save Course" width="33%" btnType="link" leftIcon={BookmarkIcon()} />
                 </Grid>
             </Grid>
         </Grid>

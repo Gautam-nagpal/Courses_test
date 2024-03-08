@@ -2,7 +2,7 @@ import { Grid } from '@material-ui/core';
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { CustomDialog, EnrollCourse, Homepage } from "../components"
+import { EnrollCourse, Homepage } from "../components"
 
 export default function Routes() {
 
