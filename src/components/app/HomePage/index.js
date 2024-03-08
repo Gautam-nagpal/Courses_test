@@ -54,8 +54,8 @@ export default function Homepage(props) {
                     }
                 </CourseListContainerStyled>
                 <Grid item>
-                    <Button title="Enroll in Course" width="33%" onClick={handleClickEnroll} />
-                    <Button title="Save Course" width="33%" btnType="link" leftIcon={BookmarkIcon()} />
+                    <Button title="Enroll in Course" width="442px" onClick={handleClickEnroll} />
+                    <Button title="Save Course" width="442px" btnType="link" leftIcon={BookmarkIcon()} />
                 </Grid>
             </Grid>
         </Grid>
